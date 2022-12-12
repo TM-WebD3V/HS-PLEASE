@@ -1,0 +1,176 @@
+:root {
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+  --Soft-violet: hsl(273, 75%, 66%);
+  --Soft-blue: hsl(240, 73%, 65%);
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+  /* Fonts */
+  --ff-400: 400;
+  --ff-700: 700;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Helper Classes */
+.hidden {
+  display: none;
+}
+
+.clr-black {
+  color: var(--Very-dark-desaturated-blue);
+  font-weight: var(--ff-700);
+  margin-bottom: 0.3rem;
+}
+.is-active {
+  transform: rotateX(180deg);
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background: linear-gradient(var(--Soft-violet), var(--Soft-blue));
+  padding-inline: 1.4em;
+  display: grid;
+  align-items: center;
+}
+
+.main-card-component {
+  background-color: white;
+  border-radius: 1.2rem;
+  padding-block-end: 2.5rem;
+  padding-block-start: 8rem;
+  padding-inline: 1.5rem;
+  position: relative;
+}
+
+.title {
+  font-weight: var(--ff-700);
+  font-size: 2.3rem;
+  color: var(--Very-dark-desaturated-blue);
+  text-align: center;
+  margin-bottom: 1em;
+}
+.deco-img {
+  position: absolute;
+  top: -110px;
+  left: 50px;
+  width: 15rem;
+  z-index: 2;
+}
+
+.absolute-decor {
+  position: absolute;
+  background: url("./images/bg-pattern-mobile.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 15rem;
+  height: 10rem;
+  top: -5px;
+  z-index: 1;
+  left: 50px;
+}
+
+.questions,
+.answers {
+  color: var(--Very-dark-grayish-blue);
+}
+
+.questions {
+  font-size: 0.89rem;
+  text-align: left;
+}
+
+.border-btm {
+  border-bottom: 2px solid var(--Light-grayish-blue);
+  margin-block: 0.6em;
+}
+
+.answers {
+  font-size: 0.86rem;
+}
+.flex-faq {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cta {
+  outline: none;
+  background-color: white;
+  border: none;
+  width: 1.6rem;
+  cursor: pointer;
+}
