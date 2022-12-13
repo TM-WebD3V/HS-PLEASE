@@ -258,7 +258,9 @@ body {
     gap: 0;
     padding-inline: 5rem;
     padding-block: 2rem;
-    max-width: 69rem;
+  }
+  main {
+    padding-inline: 23rem;
   }
   .deco-img {
     position: absolute;
@@ -275,8 +277,8 @@ body {
 
   .absolute-decor.box {
     width: 10rem;
-    top: 420px;
-    left: -61px;
+    top: 430px;
+    left: 307px;
     z-index: 2;
   }
   .border-btm {
