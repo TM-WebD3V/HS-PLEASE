@@ -102,6 +102,16 @@ select {
   transform: rotateX(180deg);
   transition: 300ms ease-in;
 }
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  transition: all 200ms ease-in-out;
+}
 
 body {
   font-family: "Kumbh Sans", sans-serif;
@@ -193,8 +203,10 @@ body {
   .main-card-component {
     display: flex;
     flex-direction: row;
-    overflow: hidden;
     padding-block: 2rem;
+    gap: 1rem;
+    /* max-width: 70rem; */
+    overflow: hidden;
   }
   .title {
     text-align: left;
@@ -209,14 +221,65 @@ body {
   .img-section,
   .text-section {
     flex: 50%;
+    overflow: hidden;
   }
   .deco-img {
     position: absolute;
-    top: 130px;
-    left: -20px;
+    top: 45px;
+    left: -59px;
     width: 23rem;
   }
   .absolute-decor {
-    top: 250px;
+    position: absolute;
+    background: url("./images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 23rem;
+    height: 21rem;
+    left: -48px;
+    top: 27px;
+  }
+
+  .absolute-decor.box {
+    display: block;
+    position: absolute;
+    background: url("./images/illustration-box-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10rem;
+    top: 357px;
+    left: -61px;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 1000px) {
+  .main-card-component {
+    gap: 0;
+    padding-inline: 5rem;
+    padding-block: 2rem;
+    max-width: 69rem;
+  }
+  .deco-img {
+    position: absolute;
+    top: 25px;
+    left: -72px;
+    width: 29rem;
+  }
+  .absolute-decor {
+    width: 29rem;
+    height: 27rem;
+    left: -54px;
+    top: -20px;
+  }
+
+  .absolute-decor.box {
+    width: 10rem;
+    top: 420px;
+    left: -61px;
+    z-index: 2;
+  }
+  .border-btm {
+    margin-block: 1rem;
   }
 }
