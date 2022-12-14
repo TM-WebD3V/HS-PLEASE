@@ -102,6 +102,9 @@ select {
   transform: rotateX(180deg);
   transition: 300ms ease-in;
 }
+.not-active {
+  transition: 300ms ease-in;
+}
 .visually-hidden:not(:focus):not(:active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
