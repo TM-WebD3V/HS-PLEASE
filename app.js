@@ -25,20 +25,24 @@ arrowButton1.addEventListener("click", () => {
 arrowButton2.addEventListener("click", () => {
   arrowButton2.classList.toggle("is-active");
   clrBlack2.classList.toggle("clr-black");
+  answers2.classList.toggle("visually-hidden");
   answers2.classList.toggle("not-active");
 });
 arrowButton3.addEventListener("click", () => {
   arrowButton3.classList.toggle("is-active");
   clrBlack3.classList.toggle("clr-black");
   answers3.classList.toggle("not-active");
+  answers3.classList.toggle("visually-hidden");
 });
 arrowButton4.addEventListener("click", () => {
   arrowButton4.classList.toggle("is-active");
   clrBlack4.classList.toggle("clr-black");
   answers4.classList.toggle("not-active");
+  answers4.classList.toggle("visually-hidden");
 });
 arrowButton5.addEventListener("click", () => {
   arrowButton5.classList.toggle("is-active");
   clrBlack5.classList.toggle("clr-black");
   answers5.classList.toggle("not-active");
+  answers5.classList.toggle("visually-hidden");
 });
